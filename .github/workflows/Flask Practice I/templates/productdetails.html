@@ -1,0 +1,19 @@
+{% include "header.html" %}
+<h1>Product Details</h1>
+
+<table>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>{{ product.code }}</td>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+    </tr>
+</table>
+
+<a href="/products">Back</a>
+
+{% include "footer.html" %}

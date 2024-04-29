@@ -1,0 +1,23 @@
+{% include "header.html" %}
+
+<h1>Login</h1>
+{% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+{% endif %}
+<form action="/auth" method="POST">
+   <div>
+     <label for="email">Username or email address</label>
+   </div>
+   <input type="text" id="email" name="email" required>
+   <div>
+     <label for="password">Password</label>
+   </div>
+   <input type="password" id="password" name="password" required>
+   <div>
+     <input type="submit" value="Login"/>
+   </div>
+</form>
+
+<p>Forgot your password? <a href="/change_password">Change it here</a>.</p>
+
+{% include "footer.html" %}
